@@ -270,8 +270,14 @@ img{
       font-size: 20px;
       
   }
+ 
+  
  .footer__items{
      align-items: center;
+     
+ }
+ .items{
+     padding-inline-start:0px ;
  }
   .social a{
       color: white;
