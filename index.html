@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="main.css" />
+		<link rel="stylesheet" href="style.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+		/>
+		
+		<title>Toyota</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<nav class="menu">
+				<ul id="menu-list">
+                  	<li>
+						<a href="#modelos">Modelos</a>
+					</li>
+					<li>
+						<a href="#sucursales">Sucursales</a>
+					</li>
+					<li>
+						<a href="#gallery">Galeria</a>
+					</li>
+					<li>
+						<a href="#contacto">Contacto</a>
+					</li>
+					
+					<li class="loginLink">
+						<a class="open-button" onclick="openForm()">LOG IN</a>						
+					</li>
+					<li class="btn_signupLink">
+						<a class="open-button" onclick="openForm2()">SING IN</a>
+					</li>
+				</ul>
+			</nav>
+			<div class="form-popup" id="myForm">
+				<form action="/action_page.php" class="form-container">
+				  <h1>Login</h1>
+			  
+				  <label for="email"><b>Email</b></label>
+				  <input type="text" placeholder="Enter Email" name="email" required>
+			  
+				  <label for="psw"><b>Password</b></label>
+				  <input type="password" placeholder="Enter Password" name="psw" required>
+			  
+				  <button type="submit" class="btn">Login</button>
+				  <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+				</form>
+			</div>
+
+			<div class="form-popup" id="myForm2">
+				<form action="/action_page.php" class="form-container">
+				  <h1>Register</h1>
+				  <label for="name"><b>Name</b></label>
+				  <input type="text" placeholder="Enter name" name="name" required> 
+				  	
+				  <label for="email"><b>Email</b></label>
+				  <input type="email" placeholder="Enter Email" name="email" required>
+			  
+				  <label for="psw"><b>Password</b></label>
+				  <input type="password" placeholder="Enter Password" name="psw" required>
+				  
+				  <label for="psw"><b>Repeat Password</b></label>
+				  <input type="password" placeholder="Repeat Password" name="psw2" required>	
+				  
+				  <button type="submit" class="btn">Register</button>
+				  <button type="button" class="btn cancel" onclick="closeForm2()">Close</button>
+				</form>
+			</div>
+			<div class="top">
+				<div class="portada"></div>
+			</div>
+
+			<section id="modelos" class="modelos">
+				<div class="card">
+					<img
+						class="card__img"
+						src="assets/toyota-prius.jpg"
+					/>
+					<div class="card__detalles">
+						<h2>Prius</h2>
+						<p>
+							Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+							Pariatur, dolore.
+						</p>
+					</div>
+				</div>
+				<div class="card">
+					<img
+						class="card__img"
+						src="assets/supra.jpg"
+					/>
+					<div class="card__detalles">
+						<h2>Supra</h2>
+						<p>
+							Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+							Pariatur, dolore.
+						</p>
+					</div>
+				</div>
+				<div class="card">
+					<img
+						class="card__img"
+						src="assets/hilux.jpg"
+					/>
+					<div class="card__detalles">
+						<h2>Hilux</h2>
+						<p>
+							Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+							Pariatur, dolore.
+						</p>
+					</div>
+				</div>
+				<div class="card">
+					<img
+						class="card__img"
+						src="assets/taco.jpg"
+					/>
+					<div class="card__detalles">
+						<h2>Tacoma</h2>
+						<p>
+							Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+							Pariatur, dolore.
+						</p>
+					</div>
+				</div>
+			</section>
+			<section id="gallery" class="gallery">
+				<h2>FOTOS</h2>
+				<img src="https://source.unsplash.com/random/200x200?v1" />
+				<img src="https://source.unsplash.com/random/200x200?v2" />
+				<img src="https://source.unsplash.com/random/200x200?v3" />
+				<img src="https://source.unsplash.com/random/200x200?v4" />
+				<img src="https://source.unsplash.com/random/200x200?v9" />
+				<img src="https://source.unsplash.com/random/200x200?v6" />
+				<img src="https://source.unsplash.com/random/200x200?v7" />
+				<img src="https://source.unsplash.com/random/200x200?v8" />
+			</section>
+			<section id="contacto" class="contacto">
+				<div class="contacto__img">
+					<!-- <img src="assets/contacto.jpg" alt="" /> -->
+				</div>
+				<div class="contacto__formulario">
+                    
+					<form action="action_page">
+                        <h4>¿En que 
+                            podemos ayudarte?</h3>	
+                            
+						<input
+							type="text"
+							id="name"
+							name="name"
+							placeholder="Your name.."
+						/>
+						<br>
+						<input
+							type="email"
+							id="email"
+							name="email"
+							placeholder="Your email.."
+						/>
+                        <br>
+						
+						<select id="tema" name="tema" placeholder="Tema">
+							<option value="Ventas">Ventas</option>
+							<option value="Reparaciones">Reparaciones</option>
+							<option value="Garantia">Garantia</option>
+                            <option value="Otro">Otro</option>
+						</select>
+
+						<br>
+						<textarea
+							id="mensaje"
+							name="mensaje"
+							placeholder="Mensaje.."
+							
+						></textarea>
+						<input type="submit" value="Submit" />
+					</form>
+				</div>
+			</section>
+			<footer class="footer">
+				<div class="footer__items">
+					<ul class="items">
+						<li class="social">
+							<a href="www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+						</li >
+						<li class="social">
+							<a href="www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+						</li >
+						<li class="social">
+							<a href="github.com"><i class="fa-brands fa-github"></i></a>
+						</li >
+						<li class="social">
+							<a href="www.twitter.com"><i class="fa-brands fa-twitter"></i></a>
+						</li>
+					</ul>
+				</div>
+			</footer>
+		</div>
+		<script>
+			function openForm() {
+			  document.getElementById("myForm").style.display = "block";
+			}
+			function closeForm() {
+			  document.getElementById("myForm").style.display = "none";
+			}
+			function openForm2() {
+			  document.getElementById("myForm2").style.display = "block";
+			}
+			function closeForm2() {
+			  document.getElementById("myForm2").style.display = "none";
+			}
+		</script>
+	</body>
+</html>

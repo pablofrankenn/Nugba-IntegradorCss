@@ -1,0 +1,284 @@
+button{
+    background: #ccc;
+    border: 1px black solid;
+    border-radius: 2px;
+    padding: 10px 20px;
+}
+
+img{
+    max-width: 100%;
+}
+
+/*WRAPPER*/
+.wrapper{
+    display: grid;
+    grid-gap: 15px;
+}
+
+/*TOP*/
+.top{
+    display: grid;
+    grid-gap:20px;
+}
+.portada{
+    min-height: 400px;
+    background: white url(assets/portada.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.portada h1{
+    text-align: center;
+    font-size: 50px;
+}
+
+/*MENU*/
+.menu{
+    background: black;    
+    display: grid;
+    grid-template-columns:repeat(auto-fit,
+    minmax(200px,2fr));
+    align-items: center;
+    
+}
+.menu ul{
+    display: grid;
+    grid-template-columns:repeat(auto-fit,
+    minmax(150px,1fr));
+    padding: 0;
+    list-style: none;
+   
+}
+.menu button{
+    display: block;
+}
+.menu li{
+    text-align: center;
+}
+
+.menu a{
+    display: inline-block;
+    text-decoration: none;
+    padding: 5px;
+    text-align: center;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: white;
+}
+
+/*Modelos*/
+.modelos{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+    border-radius: 8px;
+}
+
+.card{
+    background-color: black;
+    box-shadow: 0 0 5px rgba(0,0,0,0.4);
+    border-radius: 8px;
+    
+    color: white;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    align-items: center;
+    grid-gap: 10px;
+}
+
+.card__img{
+    width: 100%;
+    border-radius: 8px;
+    
+}
+
+/*GALLERY*/
+.gallery{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+}
+.gallery img{
+    width: 100%;
+    border-radius: 4px;
+}
+.gallery h2{
+    grid-column:  1 / -1;
+    display: grid;
+    grid-gap: 20px;
+    color: rgb(12, 11, 11);
+    align-items: center;
+    text-align: center;
+}
+
+/*CONTACTO*/
+
+.contacto{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    background: black;
+    margin: -1px;
+    
+}
+
+.contacto__img{    
+    display: grid;
+    background: black   url("assets/contacto.jpg");
+    background-size: cover;
+
+}
+
+.contacto__formulario{  
+    display: grid;
+    grid-template-rows: repeat(auto-fit,minmax(20px,1fr));
+    color: white;
+    padding: 20px;
+    font-size: 15px;
+    min-height: 300px;
+    min-width: 250px;
+}
+
+.contacto img{
+    width: 100%;
+    height: 100%;
+    
+}
+/*Formulario*/
+
+.contacto input{
+    border: none;
+    background:inherit ;
+    margin: 5px;
+    
+    
+    
+}
+
+.contacto__formulario h4{
+    margin: 10px;
+    color: white;
+    font-size: 25px;
+}
+.contacto select{
+    margin: 5px;
+    
+    color: white;
+    background: inherit;
+    background-color: black;
+}
+
+.contacto textarea{
+    margin: 5px;
+    min-width: 1fr;
+    min-height: 100px;
+    color: white;
+    background: inherit;
+    background-color: black;
+  }
+
+/*login form*/
+.open-button {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+   
+    
+    
+  }  
+  .form-popup {
+    display: none;
+    position: fixed;
+    background-color: rgba(0,0,0,0.7);
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+  }
+  .form-popup h1{
+      text-align: center;
+  }
+  
+  .form-container {
+    max-width: 300px;
+    padding: 10px;
+    background: black;
+    color: white;
+    border-radius: 8px;
+    font-size: 15px;
+    position:absolute;
+    left:50%;
+    top:100px;
+    margin-left:-150px;
+   
+  }
+  
+  .form-container input[type=text], input[type=email], .form-container input[type=password] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    border-radius: 3px;
+   
+  }
+  .form-container input[type=text]:focus, .form-container input[type=password]:focus {
+    background-color: rgb(36, 35, 35);
+    outline: none;
+    
+  }
+  .form-container .btn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+  }
+  .form-container .cancel {
+    background-color: rgba(0,0,0,0.4);
+  }
+  .form-container .cancel:hover {
+  background: rgba(29, 28, 28, 0.5);
+ }
+  
+  .form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+  }
+/*footer*/
+  .footer{
+      display: grid;
+      background: rgb(31, 30, 30);  
+     margin-top: -15px;
+     padding-top: 30px;
+     padding-bottom: 30px;
+  }
+  .items{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px,1fr));
+    justify-content: center;
+  }
+  .social{
+      display: grid;
+      list-style: none;
+      font-size: 20px;
+      
+  }
+ .footer__items{
+     align-items: center;
+ }
+  .social a{
+      color: white;
+      text-decoration: none;
+      text-align: center;
+  }
+  .social a:hover{
+      font-size: 25px;
+      color: red;
+  }
